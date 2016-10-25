@@ -19,78 +19,121 @@
     <a href="https://github.com/hs-web/hsweb-framework/zipball/master" class="btn">Download .zip</a>
     <a href="https://github.com/hs-web/hsweb-framework/tarball/master" class="btn">Download .tar.gz</a>
 </section>
-
 <section class="main-content">
-    <h1>
-        <p>后台管理基础框架</p>
-        <!--<a id="hsweb-framework" class="anchor" href="#hsweb-framework" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>hsweb-framework</h1>-->
-    </h1>
-    <p>
-        <a href="https://travis-ci.org/hs-web/hsweb-framework" target="_blank"><img src="https://travis-ci.org/hs-web/hsweb-framework.svg?branch=master"></a>
-        <a href="https://www.apache.org/licenses/LICENSE-2.0.html" target="_blank"><img src="https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square">
-        </a>
-    </p>
-    <b>基于java8,spring-boot,mybatis。快速构建后台管理应用。</b>
-    <h3>
-        <a id="主要功能" class="anchor" href="#%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>主要功能</h3>
+      <h2>
+<a id="后台管理基础框架" class="anchor" href="#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>后台管理基础框架</h2>
 
-    <ol>
-        <li>配置简单,main方法直接启动.</li>
-        <li>通用dao,service,controller类，增删改查直接继承即可.</li>
-        <li>通用mybatis配置文件,支持多种条件查询自动生成,支持自动生成sql语句,支持各种查询条件,条件嵌套.</li>
-        <li>实现用户,权限管理;基于aop,注解,精确到按钮的权限控制.</li>
-        <li>动态表单,可在前端设计表单,动态生成数据库表,页面,增删改查无需重启直接使用.</li>
-        <li>动态数据源,数据源热加载,动态切换,支持跨数据库事务.</li>
-        <li>缓存,支持simple,redis自动切换</li>
-        <li>定时调度,支持集群</li>
-        <li>在线代码生成器,可自定义模板适应各种需求.</li>
-        <li>数据库支持 mysql,oracle,h2.</li>
-    </ol>
+<p><a href="https://travis-ci.org/hs-web/hsweb-framework"><img src="https://travis-ci.org/hs-web/hsweb-framework.svg?branch=master" alt="Build Status"></a>
+<a href="https://www.apache.org/licenses/LICENSE-2.0.html"><img src="https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square" alt="License"></a></p>
 
-    <h3>
-        <a id="工具包" class="anchor" href="#%E5%85%B6%E4%BB%96%E7%BB%84%E4%BB%B6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>工具包</h3>
-    <ol>
-        <li>
-            <a href="https://github.com/hs-web/hsweb-easy-orm">hsweb-easy-orm</a> :为动态表单设计的orm框架
-        </li>
-        <li>
-            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-compress">hsweb-expands-compress</a> :文件压缩，解压操作
-        </li>
-        <li>
-            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-office">hsweb-expands-office</a> :office文档操作( excel读写，模板导出，word模板导出)
-        </li>
-        <li>
-            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-request">hsweb-expands-request</a>: 请求模拟(http,ftp)
-        </li>
-        <li>
-            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-script">hsweb-expands-script</a>:动态脚本,动态编译执行java,groovy,javascript,spel,ognl....
-        </li>
-        <li>
-            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-shell">hsweb-expands-shell</a>:shell执行
-        </li>
-        <li>
-            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-template">hsweb-expands-template</a>:各种模板引擎
-        </li>
-    </ol>
+<h3>
+<a id="业务功能" class="anchor" href="#%E4%B8%9A%E5%8A%A1%E5%8A%9F%E8%83%BD" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>业务功能</h3>
 
-    <h3>
-        <a id="安装" class="anchor" href="#%E5%AE%89%E8%A3%85" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>安装</h3>
+<p>现在:</p>
 
-    <div class="highlight highlight-source-shell"><pre>    $ git clone https://github.com/hs-web/hsweb-framework.git
-    $ <span class="pl-c1">cd</span> hsweb-framework
-    $ mvn install -DskiptTests</pre>
-    </div>
-    <h3><a id="使用" class="anchor" href="#%E4%BD%BF%E7%94%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>使用</h3>
-    <ol>
-        <li>在线demo:<a target="_blank" href="http://demo.hsweb.me">demo.hsweb.me</a>
-            测试用户:test (test2,test3,test4....) 密码:123456
-        </li>
-        <li><a href="https://github.com/hs-web/hsweb-demo" target="_blank">demo源码</a></li>
-        <!--<li>用户文档</li>-->
-        <!--<li>开发文档</li>-->
-        <li><a href="https://github.com/hs-web/hsweb-framework/issues" target="_blank">提交问题</a></li>
-    </ol>
+<ol>
+<li>权限管理: 权限资源-角色-用户.</li>
+<li>配置管理: kv结构,自定义配置.可通过此功能配置数据字典.</li>
+<li>脚本管理: 动态脚本,支持javascript,groovy,java动态编译执行.</li>
+<li>表单管理: 动态表单,可视化设计表单,自动生成数据库以及系统权限.无需重启直接生效.</li>
+<li>模块设置: 配合动态表达没实现表格页,查询条件自定义.</li>
+<li>数据库维护: 在线维护数据库,修改表结构,执行sql.</li>
+<li>数据源管理: 配置多数据源.</li>
+<li>代码生成器: 在线生成代码,打包下载.可自定义模板.</li>
+<li>定时任务: 配置定时任务,使用动态脚本编写任务内容.</li>
+<li>系统监控: 监控系统资源使用情况.</li>
+<li>缓存监控: 监控缓存情况.</li>
+<li>访问日志: 记录用户每次操作情况</li>
+</ol>
 
+<p>未来</p>
+
+<ol>
+<li>组织架构管理: 地区-机构-部门-职务-人员.</li>
+<li>工作流管理: activiti工作流,在线配置流程,配合动态表单实现自定义流程.</li>
+<li>邮件代收: 代收指定邮箱的邮件</li>
+</ol>
+
+<h3>
+<a id="框架功能" class="anchor" href="#%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>框架功能</h3>
+
+<ol>
+<li>全局restful+json,前后分离.</li>
+<li>通用dao,service,controller类，增删改查直接继承即可.</li>
+<li>通用mybatis配置文件,支持多种条件查询自动生成,支持自动生成insert,update,delete语句,支持和查询相同的各种条件.</li>
+<li>实现用户,权限管理;基于aop,注解,精确到按钮的权限控制.</li>
+<li>动态表单功能,可在前端设计表单,动态生成数据库表,提供统一的增删改查接口.</li>
+<li>在线代码生成器,可自定义模板.</li>
+<li>动态多数据源,支持数据源热加载,热切换,支持分布式事务.</li>
+<li>数据库支持 mysql,oracle,h2.</li>
+<li>websocket支持.</li>
+<li>定时调度支持,可在页面配置定时任务,编写任务脚本执行。</li>
+</ol>
+
+<h3>
+<a id="演示" class="anchor" href="#%E6%BC%94%E7%A4%BA" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>演示</h3>
+
+<ol>
+<li>示例:<a href="http://demo.hsweb.me">demo.hsweb.me</a>
+</li>
+<li>测试用户:test (test2,test3,test4....) 密码:123456 </li>
+<li>演示项目源码:<a href="https://github.com/hs-web/hsweb-platform">hsweb-platform</a>
+</li>
+</ol>
+
+<h3>
+<a id="文档" class="anchor" href="#%E6%96%87%E6%A1%A3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>文档</h3>
+
+<ol>
+<li><a href="doc/1.%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8.md">安装使用</a></li>
+<li><a href="doc/2.API.md">API</a></li>
+</ol>
+
+<h3>
+<a id="此版本待完善功能" class="anchor" href="#%E6%AD%A4%E7%89%88%E6%9C%AC%E5%BE%85%E5%AE%8C%E5%96%84%E5%8A%9F%E8%83%BD" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>此版本待完善功能</h3>
+
+<ol>
+<li>单元测试编写</li>
+<li>项目文档编写</li>
+<li><del>增加定时调度,支持集群,任务采用脚本方式编写.</del></li>
+<li>完善数据库持续集成,版本更新时自动更新数据库结构.</li>
+<li>完善动态表单发布,表单发生变化后,自动重新发布(解决集群下,表单配置不一致).</li>
+</ol>
+
+<h3>
+<a id="技术选型" class="anchor" href="#%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>技术选型</h3>
+
+<p>第三方:</p>
+
+<ol>
+<li>MVC:<a href="https://github.com/spring-projects/spring-boot">spring-boot</a>. 开箱即用,学习成本低,部署方便(main方法运行).</li>
+<li>ORM:<a href="https://github.com/mybatis/mybatis-3">mybatis</a>. 配置灵活,简单方便.</li>
+<li>JTA:<a href="https://www.atomikos.com/">atomikos</a>. 分布式事务,多数据源事务全靠他.</li>
+<li>Cache:<a href="https://github.com/spring-projects/spring-framework/tree/master/spring-context/src/main/java/org/springframework/cache">spring-cache</a>. 统一接口,注解使用,simple,redis... 自动切换.</li>
+<li>Scheduler:<a href="https://github.com/quartz-scheduler/quartz">quartz</a>. 开源稳定,支持集群.</li>
+</ol>
+
+<p>自家:</p>
+
+<ol>
+<li>
+<a href="https://github.com/hs-web/hsweb-commons">hsweb-commons</a> :通用工具类</li>
+<li>
+<a href="https://github.com/hs-web/hsweb-easy-orm">hsweb-easy-orm</a> :为动态表单设计的orm框架</li>
+<li>
+<a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-compress">hsweb-expands-compress</a> :文件压缩，解压操作</li>
+<li>
+<a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-office">hsweb-expands-office</a> :office文档操作( excel读写，模板导出，word模板导出)</li>
+<li>
+<a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-request">hsweb-expands-request</a>: 请求模拟(http,ftp)</li>
+<li>
+<a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-script">hsweb-expands-script</a>:动态脚本,动态编译执行java,groovy,javascript,spel,ognl....</li>
+<li>
+<a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-shell">hsweb-expands-shell</a>:shell执行</li>
+<li>
+<a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-template">hsweb-expands-template</a>:各种模板引擎</li>
+</ol>
+ 
     <h3>
         <a id="加入hsweb" class="anchor" href="#%E5%8A%A0%E5%85%A5hsweb" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>加入hsweb</h3>
 
