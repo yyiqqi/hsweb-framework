@@ -7,7 +7,7 @@
     <meta name="description" content="使用java8,spring-boot,mybatis快速构建后台管理应用,支持集群,动态数据源,分布式事务,定时调度,代码生成器">
     <meta name="keywords" content="java,java8,spring-boot,mybatis,后台管理,后台管理框架">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 </head>
@@ -24,10 +24,8 @@
         <a id="后台管理基础框架" class="anchor" href="#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6"
            aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>后台管理基础框架</h2>
 
-    <p><a href="https://travis-ci.org/hs-web/hsweb-framework"><img
-            src="https://travis-ci.org/hs-web/hsweb-framework.svg?branch=master" alt="Build Status"></a>
-        <a href="https://www.apache.org/licenses/LICENSE-2.0.html"><img
-                src="https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square" alt="License"></a>
+    <p><a href="https://travis-ci.org/hs-web/hsweb-framework"><img  src="images/travis.svg" id="travis" alt="Build Status"></a>
+        <a href="https://www.apache.org/licenses/LICENSE-2.0.html"><img id="license" src="images/license.svg" alt="License"></a>
     </p>
 
     <h3>
@@ -152,8 +150,9 @@
     </p>
     <p>515649185</p>
     <h3>
-        <a id="donate" class="anchor" href="#donate" aria-hidden="true"><span aria-hidden="true"
-                                                                                class="octicon octicon-link"></span></a>赞助hsweb
+        <a id="donate" class="anchor" href="#donate" aria-hidden="true">
+            <span aria-hidden="true" class="octicon octicon-link"></span>
+        </a>赞助hsweb
     </h3>
     <p>开源项目的发展离不开您的支持</p>
     <table style="text-align: center">
@@ -245,3 +244,14 @@
 
 </body>
 </html>
+<script type="text/javascript">
+    var urls = {
+        travis: "https://travis-ci.org/hs-web/hsweb-framework.svg?branch=master"
+    };
+    window.setTimeout(function () {
+        for (var id in urls) {
+            document.getElementById(id).setAttribute("src", urls[id]);
+        }
+    }, 500);
+
+</script>
