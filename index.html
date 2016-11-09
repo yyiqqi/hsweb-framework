@@ -7,31 +7,41 @@
     <meta name="description" content="使用java8,spring-boot,mybatis快速构建后台管理应用,支持集群,动态数据源,分布式事务,定时调度,代码生成器">
     <meta name="keywords" content="java,java8,spring-boot,mybatis,后台管理,后台管理框架">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 </head>
 <body>
 <section class="page-header">
-    <h1 class="project-name">企业后台管理基础框架</h1>
+    <h1 class="project-name">hsweb 企业后台管理基础框架</h1>
     <h2 class="project-tagline">快速构建企业后台管理应用</h2>
-    <a href="https://github.com/hs-web/hsweb-framework" class="btn">View on GitHub</a>
-    <a href="https://github.com/hs-web/hsweb-framework/zipball/master" class="btn">Download .zip</a>
-    <a href="https://github.com/hs-web/hsweb-framework/tarball/master" class="btn">Download .tar.gz</a>
+    <a target="_blank" href="https://github.com/hs-web/" class="btn">项目地址</a>
+    <a href="#%E6%BC%94%E7%A4%BA" class="btn">在线演示</a>
+    <a target="_blank" href="http://doc.hsweb.me" class="btn">项目文档</a>
+    <br/>
+    <a target="_blank" href="https://travis-ci.org/hs-web/hsweb-framework">
+        <img src="images/travis.svg" id="travis" alt="Build Status"></a>
+    <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0.html">
+        <img id="license" src="images/license.svg"></a>
+    <a target="_blank"
+       href="http://shang.qq.com/wpa/qunwpa?idkey=3d66b5dd14991d7645af694e7649b373f3a9ce1216131094c78cb2348d542c41">
+        <img id="qq" src="images/qq.svg"></a>
 </section>
 <section class="main-content">
-    <h2>
+    <!--<h2>
         <a id="后台管理基础框架" class="anchor" href="#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6"
            aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>后台管理基础框架</h2>
-
-    <p><a href="https://travis-ci.org/hs-web/hsweb-framework"><img  src="images/travis.svg" id="travis" alt="Build Status"></a>
-        <a href="https://www.apache.org/licenses/LICENSE-2.0.html"><img id="license" src="images/license.svg" alt="License"></a>
-    </p>
+-->
+    <!--<p>-->
+    <!--<a target="_blank" href="https://travis-ci.org/hs-web/hsweb-framework"><img src="images/travis.svg" id="travis"-->
+    <!--alt="Build Status"></a>-->
+    <!--<a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0.html"><img id="license"-->
+    <!--src="images/license.svg"-->
+    <!--</p>-->
 
     <h3>
         <a id="业务功能" class="anchor" href="#%E4%B8%9A%E5%8A%A1%E5%8A%9F%E8%83%BD" aria-hidden="true"><span
                 aria-hidden="true" class="octicon octicon-link"></span></a>业务功能</h3>
-
     <p>现在:</p>
 
     <ol>
@@ -80,10 +90,10 @@
     </h3>
 
     <ol>
-        <li>示例:<a href="http://demo.hsweb.me">demo.hsweb.me</a>
+        <li>示例:<a target="_blank" href="http://demo.hsweb.me">demo.hsweb.me</a>
         </li>
         <li>测试用户:test (test2,test3,test4....) 密码:123456</li>
-        <li>演示项目源码:<a href="https://github.com/hs-web/hsweb-platform">hsweb-platform</a>
+        <li>演示项目源码:<a target="_blank" href="https://github.com/hs-web/hsweb-demo">hsweb-demo</a>
         </li>
     </ol>
 
@@ -94,61 +104,62 @@
     <p>第三方:</p>
 
     <ol>
-        <li>MVC:<a href="https://github.com/spring-projects/spring-boot">spring-boot</a>. 开箱即用,学习成本低,部署方便(main方法运行).
+        <li>MVC:<a target="_blank" href="https://github.com/spring-projects/spring-boot">spring-boot</a>.
+            开箱即用,学习成本低,部署方便(main方法运行).
         </li>
-        <li>ORM:<a href="https://github.com/mybatis/mybatis-3">mybatis</a>. 配置灵活,简单方便.</li>
-        <li>JTA:<a href="https://www.atomikos.com/">atomikos</a>. 分布式事务,多数据源事务全靠他.</li>
-        <li>Cache:<a
-                href="https://github.com/spring-projects/spring-framework/tree/master/spring-context/src/main/java/org/springframework/cache">spring-cache</a>.
+        <li>ORM:<a target="_blank" href="https://github.com/mybatis/mybatis-3">mybatis</a>. 配置灵活,简单方便.</li>
+        <li>JTA:<a target="_blank" href="https://www.atomikos.com/">atomikos</a>. 分布式事务,多数据源事务全靠他.</li>
+        <li>Cache:<a target="_blank"
+                     href="https://github.com/spring-projects/spring-framework/tree/master/spring-context/src/main/java/org/springframework/cache">spring-cache</a>.
             统一接口,注解使用,simple,redis... 自动切换.
         </li>
-        <li>Scheduler:<a href="https://github.com/quartz-scheduler/quartz">quartz</a>. 开源稳定,支持集群.</li>
+        <li>Scheduler:<a target="_blank" href="https://github.com/quartz-scheduler/quartz">quartz</a>. 开源稳定,支持集群.</li>
     </ol>
 
     <p>自家:</p>
 
     <ol>
         <li>
-            <a href="https://github.com/hs-web/hsweb-commons">hsweb-commons</a> :通用工具类
+            <a target="_blank" href="https://github.com/hs-web/hsweb-commons">hsweb-commons</a> :通用工具类
         </li>
         <li>
-            <a href="https://github.com/hs-web/hsweb-easy-orm">hsweb-easy-orm</a> :为动态表单设计的orm框架
+            <a target="_blank" href="https://github.com/hs-web/hsweb-easy-orm">hsweb-easy-orm</a> :为动态表单设计的orm框架
         </li>
         <li>
-            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-compress">hsweb-expands-compress</a>
+            <a target="_blank" href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-compress">hsweb-expands-compress</a>
             :文件压缩，解压操作
         </li>
         <li>
-            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-office">hsweb-expands-office</a>
+            <a target="_blank" href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-office">hsweb-expands-office</a>
             :office文档操作( excel读写，模板导出，word模板导出)
         </li>
         <li>
-            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-request">hsweb-expands-request</a>:
+            <a target="_blank" href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-request">hsweb-expands-request</a>:
             请求模拟(http,ftp)
         </li>
         <li>
-            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-script">hsweb-expands-script</a>:动态脚本,动态编译执行java,groovy,javascript,spel,ognl....
+            <a target="_blank" href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-script">hsweb-expands-script</a>:动态脚本,动态编译执行java,groovy,javascript,spel,ognl....
         </li>
         <li>
-            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-shell">hsweb-expands-shell</a>:shell执行
+            <a target="_blank" href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-shell">hsweb-expands-shell</a>:shell执行
         </li>
         <li>
-            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-template">hsweb-expands-template</a>:各种模板引擎
+            <a target="_blank" href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-template">hsweb-expands-template</a>:各种模板引擎
         </li>
     </ol>
 
-    <h3>
-        <a id="加入hsweb" class="anchor" href="#%E5%8A%A0%E5%85%A5hsweb" aria-hidden="true"><span aria-hidden="true"
-                                                                                                class="octicon octicon-link"></span></a>加入hsweb
-    </h3>
+    <!--<h3>-->
+    <!--<a id="加入hsweb" class="anchor" href="#%E5%8A%A0%E5%85%A5hsweb" aria-hidden="true"><span aria-hidden="true"-->
+    <!--class="octicon octicon-link"></span></a>加入hsweb-->
+    <!--</h3>-->
 
-    <p>
-        <a target="_blank"
-           href="http://shang.qq.com/wpa/qunwpa?idkey=3d66b5dd14991d7645af694e7649b373f3a9ce1216131094c78cb2348d542c41">
-            <img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="hsweb.me" title="hsweb.me">
-        </a>
-    </p>
-    <p>515649185</p>
+    <!--<p>-->
+    <!--<a target="_blank"-->
+    <!--href="http://shang.qq.com/wpa/qunwpa?idkey=3d66b5dd14991d7645af694e7649b373f3a9ce1216131094c78cb2348d542c41">-->
+    <!--<img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="hsweb.me" title="hsweb.me">-->
+    <!--</a>-->
+    <!--</p>-->
+    <!--<p>515649185</p>-->
     <h3>
         <a id="donate" class="anchor" href="#donate" aria-hidden="true">
             <span aria-hidden="true" class="octicon octicon-link"></span>
