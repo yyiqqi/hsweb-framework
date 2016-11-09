@@ -20,110 +20,160 @@
     <a href="https://github.com/hs-web/hsweb-framework/tarball/master" class="btn">Download .tar.gz</a>
 </section>
 <section class="main-content">
-      <h2>
-<a id="后台管理基础框架" class="anchor" href="#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>后台管理基础框架</h2>
+    <h2>
+        <a id="后台管理基础框架" class="anchor" href="#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6"
+           aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>后台管理基础框架</h2>
 
-<p><a href="https://travis-ci.org/hs-web/hsweb-framework"><img src="https://travis-ci.org/hs-web/hsweb-framework.svg?branch=master" alt="Build Status"></a>
-<a href="https://www.apache.org/licenses/LICENSE-2.0.html"><img src="https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square" alt="License"></a></p>
+    <p><a href="https://travis-ci.org/hs-web/hsweb-framework"><img
+            src="https://travis-ci.org/hs-web/hsweb-framework.svg?branch=master" alt="Build Status"></a>
+        <a href="https://www.apache.org/licenses/LICENSE-2.0.html"><img
+                src="https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square" alt="License"></a>
+    </p>
 
-<h3>
-<a id="业务功能" class="anchor" href="#%E4%B8%9A%E5%8A%A1%E5%8A%9F%E8%83%BD" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>业务功能</h3>
-
-<p>现在:</p>
-
-<ol>
-<li>权限管理: 权限资源-角色-用户.</li>
-<li>配置管理: kv结构,自定义配置.可通过此功能配置数据字典.</li>
-<li>脚本管理: 动态脚本,支持javascript,groovy,java动态编译执行.</li>
-<li>表单管理: 动态表单,可视化设计表单,自动生成数据库以及系统权限.无需重启直接生效.</li>
-<li>模块设置: 配合动态表单实现表格页,查询条件自定义.</li>
-<li>数据库维护: 在线维护数据库,修改表结构,执行sql.</li>
-<li>数据源管理: 配置多数据源.</li>
-<li>代码生成器: 在线生成代码,打包下载.可自定义模板.</li>
-<li>定时任务: 配置定时任务,使用动态脚本编写任务内容.</li>
-<li>系统监控: 监控系统资源使用情况.</li>
-<li>缓存监控: 监控缓存情况.</li>
-<li>访问日志: 记录用户每次操作情况</li>
-</ol>
-
-<p>未来</p>
-
-<ol>
-<li>组织架构管理: 地区-机构-部门-职务-人员.</li>
-<li>工作流管理: activiti工作流,在线配置流程,配合动态表单实现自定义流程.</li>
-<li>邮件代收: 代收指定邮箱的邮件</li>
-</ol>
-
-<h3>
-<a id="框架功能" class="anchor" href="#%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>框架功能</h3>
-
-<ol>
-<li>全局restful+json,前后分离.</li>
-<li>通用dao,service,controller类，增删改查直接继承即可.</li>
-<li>通用mybatis配置文件,支持多种条件查询自动生成,支持自动生成insert,update,delete语句,支持和查询相同的各种条件.</li>
-<li>实现用户,权限管理;基于aop,注解,精确到按钮的权限控制.</li>
-<li>动态表单功能,可在前端设计表单,动态生成数据库表,提供统一的增删改查接口.</li>
-<li>在线代码生成器,可自定义模板.</li>
-<li>动态多数据源,支持数据源热加载,热切换,支持分布式事务.</li>
-<li>数据库支持 mysql,oracle,h2.</li>
-<li>websocket支持.</li>
-<li>定时调度支持,可在页面配置定时任务,编写任务脚本执行。</li>
-</ol>
-
-<h3>
-<a id="演示" class="anchor" href="#%E6%BC%94%E7%A4%BA" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>演示</h3>
-
-<ol>
-<li>示例:<a href="http://demo.hsweb.me">demo.hsweb.me</a>
-</li>
-<li>测试用户:test (test2,test3,test4....) 密码:123456 </li>
-<li>演示项目源码:<a href="https://github.com/hs-web/hsweb-platform">hsweb-platform</a>
-</li>
-</ol>
-
-<h3>
-<a id="技术选型" class="anchor" href="#%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>技术选型</h3>
-
-<p>第三方:</p>
-
-<ol>
-<li>MVC:<a href="https://github.com/spring-projects/spring-boot">spring-boot</a>. 开箱即用,学习成本低,部署方便(main方法运行).</li>
-<li>ORM:<a href="https://github.com/mybatis/mybatis-3">mybatis</a>. 配置灵活,简单方便.</li>
-<li>JTA:<a href="https://www.atomikos.com/">atomikos</a>. 分布式事务,多数据源事务全靠他.</li>
-<li>Cache:<a href="https://github.com/spring-projects/spring-framework/tree/master/spring-context/src/main/java/org/springframework/cache">spring-cache</a>. 统一接口,注解使用,simple,redis... 自动切换.</li>
-<li>Scheduler:<a href="https://github.com/quartz-scheduler/quartz">quartz</a>. 开源稳定,支持集群.</li>
-</ol>
-
-<p>自家:</p>
-
-<ol>
-<li>
-<a href="https://github.com/hs-web/hsweb-commons">hsweb-commons</a> :通用工具类</li>
-<li>
-<a href="https://github.com/hs-web/hsweb-easy-orm">hsweb-easy-orm</a> :为动态表单设计的orm框架</li>
-<li>
-<a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-compress">hsweb-expands-compress</a> :文件压缩，解压操作</li>
-<li>
-<a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-office">hsweb-expands-office</a> :office文档操作( excel读写，模板导出，word模板导出)</li>
-<li>
-<a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-request">hsweb-expands-request</a>: 请求模拟(http,ftp)</li>
-<li>
-<a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-script">hsweb-expands-script</a>:动态脚本,动态编译执行java,groovy,javascript,spel,ognl....</li>
-<li>
-<a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-shell">hsweb-expands-shell</a>:shell执行</li>
-<li>
-<a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-template">hsweb-expands-template</a>:各种模板引擎</li>
-</ol>
- 
     <h3>
-        <a id="加入hsweb" class="anchor" href="#%E5%8A%A0%E5%85%A5hsweb" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>加入hsweb</h3>
+        <a id="业务功能" class="anchor" href="#%E4%B8%9A%E5%8A%A1%E5%8A%9F%E8%83%BD" aria-hidden="true"><span
+                aria-hidden="true" class="octicon octicon-link"></span></a>业务功能</h3>
 
-    <p><a href="http://shang.qq.com/wpa/qunwpa?idkey=3d66b5dd14991d7645af694e7649b373f3a9ce1216131094c78cb2348d542c41">
-        <img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="hsweb.me" title="hsweb.me">
-    </a>
+    <p>现在:</p>
+
+    <ol>
+        <li>权限管理: 权限资源-角色-用户.</li>
+        <li>配置管理: kv结构,自定义配置.可通过此功能配置数据字典.</li>
+        <li>脚本管理: 动态脚本,支持javascript,groovy,java动态编译执行.</li>
+        <li>表单管理: 动态表单,可视化设计表单,自动生成数据库以及系统权限.无需重启直接生效.</li>
+        <li>模块设置: 配合动态表单实现表格页,查询条件自定义.</li>
+        <li>数据库维护: 在线维护数据库,修改表结构,执行sql.</li>
+        <li>数据源管理: 配置多数据源.</li>
+        <li>代码生成器: 在线生成代码,打包下载.可自定义模板.</li>
+        <li>定时任务: 配置定时任务,使用动态脚本编写任务内容.</li>
+        <li>系统监控: 监控系统资源使用情况.</li>
+        <li>缓存监控: 监控缓存情况.</li>
+        <li>访问日志: 记录用户每次操作情况</li>
+    </ol>
+
+    <p>未来</p>
+
+    <ol>
+        <li>组织架构管理: 地区-机构-部门-职务-人员.</li>
+        <li>工作流管理: activiti工作流,在线配置流程,配合动态表单实现自定义流程.</li>
+        <li>邮件代收: 代收指定邮箱的邮件</li>
+    </ol>
+
+    <h3>
+        <a id="框架功能" class="anchor" href="#%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD" aria-hidden="true"><span
+                aria-hidden="true" class="octicon octicon-link"></span></a>框架功能</h3>
+
+    <ol>
+        <li>全局restful+json,前后分离.</li>
+        <li>通用dao,service,controller类，增删改查直接继承即可.</li>
+        <li>通用mybatis配置文件,支持多种条件查询自动生成,支持自动生成insert,update,delete语句,支持和查询相同的各种条件.</li>
+        <li>实现用户,权限管理;基于aop,注解,精确到按钮的权限控制.</li>
+        <li>动态表单功能,可在前端设计表单,动态生成数据库表,提供统一的增删改查接口.</li>
+        <li>在线代码生成器,可自定义模板.</li>
+        <li>动态多数据源,支持数据源热加载,热切换,支持分布式事务.</li>
+        <li>数据库支持 mysql,oracle,h2.</li>
+        <li>websocket支持.</li>
+        <li>定时调度支持,可在页面配置定时任务,编写任务脚本执行。</li>
+    </ol>
+
+    <h3>
+        <a id="演示" class="anchor" href="#%E6%BC%94%E7%A4%BA" aria-hidden="true"><span aria-hidden="true"
+                                                                                      class="octicon octicon-link"></span></a>演示
+    </h3>
+
+    <ol>
+        <li>示例:<a href="http://demo.hsweb.me">demo.hsweb.me</a>
+        </li>
+        <li>测试用户:test (test2,test3,test4....) 密码:123456</li>
+        <li>演示项目源码:<a href="https://github.com/hs-web/hsweb-platform">hsweb-platform</a>
+        </li>
+    </ol>
+
+    <h3>
+        <a id="技术选型" class="anchor" href="#%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B" aria-hidden="true"><span
+                aria-hidden="true" class="octicon octicon-link"></span></a>技术选型</h3>
+
+    <p>第三方:</p>
+
+    <ol>
+        <li>MVC:<a href="https://github.com/spring-projects/spring-boot">spring-boot</a>. 开箱即用,学习成本低,部署方便(main方法运行).
+        </li>
+        <li>ORM:<a href="https://github.com/mybatis/mybatis-3">mybatis</a>. 配置灵活,简单方便.</li>
+        <li>JTA:<a href="https://www.atomikos.com/">atomikos</a>. 分布式事务,多数据源事务全靠他.</li>
+        <li>Cache:<a
+                href="https://github.com/spring-projects/spring-framework/tree/master/spring-context/src/main/java/org/springframework/cache">spring-cache</a>.
+            统一接口,注解使用,simple,redis... 自动切换.
+        </li>
+        <li>Scheduler:<a href="https://github.com/quartz-scheduler/quartz">quartz</a>. 开源稳定,支持集群.</li>
+    </ol>
+
+    <p>自家:</p>
+
+    <ol>
+        <li>
+            <a href="https://github.com/hs-web/hsweb-commons">hsweb-commons</a> :通用工具类
+        </li>
+        <li>
+            <a href="https://github.com/hs-web/hsweb-easy-orm">hsweb-easy-orm</a> :为动态表单设计的orm框架
+        </li>
+        <li>
+            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-compress">hsweb-expands-compress</a>
+            :文件压缩，解压操作
+        </li>
+        <li>
+            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-office">hsweb-expands-office</a>
+            :office文档操作( excel读写，模板导出，word模板导出)
+        </li>
+        <li>
+            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-request">hsweb-expands-request</a>:
+            请求模拟(http,ftp)
+        </li>
+        <li>
+            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-script">hsweb-expands-script</a>:动态脚本,动态编译执行java,groovy,javascript,spel,ognl....
+        </li>
+        <li>
+            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-shell">hsweb-expands-shell</a>:shell执行
+        </li>
+        <li>
+            <a href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-template">hsweb-expands-template</a>:各种模板引擎
+        </li>
+    </ol>
+
+    <h3>
+        <a id="加入hsweb" class="anchor" href="#%E5%8A%A0%E5%85%A5hsweb" aria-hidden="true"><span aria-hidden="true"
+                                                                                                class="octicon octicon-link"></span></a>加入hsweb
+    </h3>
+
+    <p>
+        <a target="_blank"
+           href="http://shang.qq.com/wpa/qunwpa?idkey=3d66b5dd14991d7645af694e7649b373f3a9ce1216131094c78cb2348d542c41">
+            <img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="hsweb.me" title="hsweb.me">
+        </a>
     </p>
     <p>515649185</p>
-    <h3><a id="鸣谢" class="anchor" href="#%E9%B8%A3%E8%B0%A2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>鸣谢</h3>
+    <h3>
+        <a id="赞助hsweb" class="anchor" href="#赞助hsweb" aria-hidden="true"><span aria-hidden="true"
+                                                                                class="octicon octicon-link"></span></a>赞助hsweb
+    </h3>
+    <table style="text-align: center">
+        <tr>
+            <td>
+                <img border="0" src="images/alipay.png" width="128" height="128" alt="支付宝" title="支付宝"><br>支付宝
+            </td>
+            <td>
+                <img border="0" src="images/wechat.png" width="128" height="128" alt="微信" title="微信"><br>微信
+            </td>
+            <td>
+                <a href="https://www.paypal.me/hsweb" target="_blank">
+                    <img border="0" src="images/paypal.png" width="128" height="128" alt="paypal" title="paypal"><br>paypal
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <h3><a id="鸣谢" class="anchor" href="#%E9%B8%A3%E8%B0%A2" aria-hidden="true"><span aria-hidden="true"
+                                                                                      class="octicon octicon-link"></span></a>鸣谢
+    </h3>
 
     <p><em>按时间排序</em></p>
 
@@ -183,7 +233,7 @@
     </table>
 
     <footer class="site-footer">
-     </footer>
+    </footer>
 
 </section>
 
