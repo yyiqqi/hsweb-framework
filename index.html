@@ -69,16 +69,15 @@
     </ol>
 
     <h3>
-        <a id="演示" class="anchor" href="#%E6%BC%94%E7%A4%BA" aria-hidden="true"><span aria-hidden="true"
-                                                                                      class="octicon octicon-link"></span></a>演示
+        <a id="演示" class="anchor" href="#%E6%BC%94%E7%A4%BA" aria-hidden="true">
+            <span aria-hidden="true" class="octicon octicon-link"></span>
+            </a>演示
     </h3>
 
     <ol>
-        <li>示例:<a target="_blank" href="http://demo.hsweb.me">demo.hsweb.me</a>
-        </li>
+        <li>示例:<a target="_blank" href="http://demo.hsweb.me">demo.hsweb.me</a></li>
         <li>测试用户:test (test2,test3,test4....) 密码:123456</li>
-        <li>演示项目源码:<a target="_blank" href="https://github.com/hs-web/hsweb-demo">hsweb-demo</a>
-        </li>
+        <li>演示项目源码:<a target="_blank" href="https://github.com/hs-web/hsweb-demo">hsweb-demo</a></li>
     </ol>
 
     <h3>
@@ -131,7 +130,16 @@
             <a target="_blank" href="https://github.com/hs-web/hsweb-expands/tree/master/hsweb-expands-template">hsweb-expands-template</a>:各种模板引擎
         </li>
     </ol>
-
+    <h3>
+        <a id="source" class="anchor" href="#source" aria-hidden="true">
+            <span aria-hidden="true" class="octicon octicon-link"></span>
+        </a>项目源代码
+    </h3>
+    <div style="width: 100%;">
+        <div  class="github-widget" data-repo="hs-web/hsweb-framework"></div>
+        <br/>
+        <script src='https://git.oschina.net/hsweb/hsweb-framework/widget_preview'></script>
+    </div>
     <h3>
         <a id="donate" class="anchor" href="#donate" aria-hidden="true">
             <span aria-hidden="true" class="octicon octicon-link"></span>
@@ -253,6 +261,7 @@
 
 </body>
 </html>
+<script type="text/javascript" src="javascripts/GithubRepoWidget.min.js"></script>
 <script type="text/javascript">
     var urls = {
         travis: "https://travis-ci.org/hs-web/hsweb-framework.svg?branch=master"
@@ -262,5 +271,5 @@
             document.getElementById(id).setAttribute("src", urls[id]);
         }
     }, 500);
-
+    GithubRepoWidget.init();
 </script>
