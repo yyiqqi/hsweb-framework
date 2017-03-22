@@ -306,24 +306,15 @@
 
 
     <br/> <br/>
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="hsweb"
-         data-title="hsweb 企业后台管理基础框架" data-url="http://www.hsweb.me"></div>
-    <!-- 多说评论框 end -->
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <!--高速版-->
+    <div id="SOHUCS" sid="www.hsweb.me"></div>
+    <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
     <script type="text/javascript">
-        var duoshuoQuery = {short_name: "hsweb"};
-        (function () {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';
-            ds.async = true;
-            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0]
-            || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
+        window.changyan.api.config({
+            appid: 'cysUlwNAF',
+            conf: 'prod_3413e900a0dc9bd22e812ee1f9d1057c'
+        });
     </script>
-    <!-- 多说公共JS代码 end -->
 
     <footer class="site-footer">
     </footer>
