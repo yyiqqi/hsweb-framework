@@ -20,8 +20,9 @@
     <h2 class="project-tagline"><b>hsweb</b>是一个用于快速构建后台管理系统的基础框架,基于java8,spring-boot,mybatis...</h2>
     <a target="_blank" href="https://github.com/hs-web/" class="btn">项目地址</a>
     <a href="#%E6%BC%94%E7%A4%BA" class="btn">在线演示</a>
-    <a target="_blank" href="https://github.com/hs-web/hsweb-framework/wiki" class="btn">项目文档</a>
-    <a target="_blank" href="https://github.com/hs-web/hsweb-framework/tree/3.0" title="开发中..." class="btn">全新3.0</a>
+    <a target="_blank" href="https://github.com/hs-web/hsweb-framework/wiki/%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C"
+       class="btn">项目文档</a>
+    <a target="_blank" href="https://github.com/hs-web/hsweb-framework" title="开发中..." class="btn">全新3.0</a>
     <br/>
     <a target="_blank" href="https://travis-ci.org/hs-web/hsweb-framework"><img src="images/travis.svg" id="travis"
                                                                                 alt="Build Status"></a>
@@ -38,29 +39,18 @@
     <h3>
         <a id="业务功能" class="anchor" href="#%E4%B8%9A%E5%8A%A1%E5%8A%9F%E8%83%BD" aria-hidden="true"><span
                 aria-hidden="true" class="octicon octicon-link"></span></a>业务功能</h3>
-    <p>现在:</p>
-
     <ol>
-        <li>权限管理: 权限资源-角色-用户.</li>
-        <li>配置管理: kv结构,自定义配置.可通过此功能配置数据字典.</li>
+        <li>权限管理: 权限,菜单,用户,角色.</li>
+        <li>组织架构: 机构-部门-岗位-人员.</li>
+        <li>数据字典: 字典配置,支持复杂格式解析.</li>
         <li>脚本管理: 动态脚本,支持javascript,groovy,java动态编译执行.</li>
         <li>表单管理: 动态表单,可视化设计表单,自动生成数据库以及系统权限.无需重启直接生效.</li>
-        <li>模块设置: 配合动态表单实现表格页,查询条件自定义.</li>
         <li>数据库维护: 在线维护数据库,修改表结构,执行sql.</li>
-        <li>数据源管理: 配置多数据源.</li>
-        <li>代码生成器: 在线生成代码,打包下载.可自定义模板.</li>
+        <li>数据源管理: 动态多数据源.</li>
         <li>定时任务: 配置定时任务,使用动态脚本编写任务内容.</li>
-        <li>系统监控: 监控系统资源使用情况.</li>
-        <li>缓存监控: 监控缓存情况.</li>
-        <li>访问日志: 记录用户每次操作情况</li>
-    </ol>
-
-    <p>未来</p>
-
-    <ol>
-        <li>组织架构管理: 地区-机构-部门-职务-人员.</li>
-        <li>工作流管理: activiti工作流,在线配置流程,配合动态表单实现自定义流程.</li>
-        <li>邮件代收: 代收指定邮箱的邮件</li>
+        <li>OAuth2.0: 客户端,服务端集成,开放接口更简单</li>
+        <li>工作流: Flowable 基本功能集成</li>
+        <li>代码生成器: 在线生成代码,打包下载.可自定义模板.</li>
     </ol>
 
     <h3>
@@ -69,15 +59,18 @@
 
     <ol>
         <li>全局restful+json,前后分离.</li>
-        <li>通用dao,service,controller类，增删改查直接继承即可.</li>
-        <li>通用mybatis配置文件,支持多种条件查询自动生成,支持自动生成insert,update,delete语句,支持和查询相同的各种条件.</li>
-        <li>实现用户,权限管理;基于aop,注解,精确到按钮的权限控制.</li>
+        <li>通用dao,service,controller类,增删改查直接继承即可.</li>
+        <li>dsl动态条件,复杂sql条件,一行代码搞定.</li>
+        <li>灵活的权限配置,session,token自定义,支持RBAC+数据权限控制.</li>
+        <li>分布式锁,集群session共享支持</li>
+        <li>动态多数据源,支持数据源热加载,热切换,支持分布式事务.</li>
+        <li>websocket支持.</li>
+        <li>定时调度支持,可在页面配置定时任务,编写任务脚本执行.</li>
+        <li>OAuth2.0 客户端,服务端支持.</li>
+        <li>在线数据库维护,支持事务.</li>
         <li>动态表单功能,可在前端设计表单,动态生成数据库表,提供统一的增删改查接口.</li>
         <li>在线代码生成器,可自定义模板.</li>
-        <li>动态多数据源,支持数据源热加载,热切换,支持分布式事务.</li>
-        <li>数据库支持 mysql,oracle,h2.</li>
-        <li>websocket支持.</li>
-        <li>定时调度支持,可在页面配置定时任务,编写任务脚本执行。</li>
+        <li>统一文件上传接口,支持秒传,静态文件上传.</li>
     </ol>
 
     <h3>
@@ -87,9 +80,11 @@
     </h3>
 
     <ol>
-        <li>示例:<a target="_blank" href="http://demo.hsweb.me">demo.hsweb.me</a></li>
-        <li>测试用户:test (test2,test3,test4....) 密码:123456</li>
-        <li>演示项目源码:<a target="_blank" href="https://github.com/hs-web/hsweb-demo">hsweb-demo</a></li>
+        <p>小霸王服务器承受不住小伙伴们的压力,请下载源码本地运行demo!</p>
+        <!--<li>示例:<a target="_blank" href="http://demo.hsweb.me">demo.hsweb.me</a></li>-->
+        <!--<li>测试用户:test (test2,test3,test4....) 密码:123456</li>-->
+        <p> 2.x版本演示项目源码:<a target="_blank" href="https://github.com/hs-web/hsweb-demo">hsweb-demo</a></p>
+        <p> 3.0版本演示项目源码:<a target="_blank" href="https://github.com/hs-web/hsweb3-demo">hsweb3-demo</a></p>
     </ol>
 
     <h3>
@@ -108,7 +103,9 @@
                      href="https://github.com/spring-projects/spring-framework/tree/master/spring-context/src/main/java/org/springframework/cache">spring-cache</a>.
             统一接口,注解使用,simple,redis... 自动切换.
         </li>
-        <li>Scheduler:<a target="_blank" href="https://github.com/quartz-scheduler/quartz">quartz</a>. 开源稳定,支持集群.</li>
+        <li>Redisson:<a target="_blank" href="https://github.com/redisson/redisson/wiki">redis客户端最佳选择</a>.</li>
+        <li>Lombok:<a target="_blank" href="https://projectlombok.org/">简化代码</a>.</li>
+        <li>Swagger:<a target="_blank" href="https://swagger.io/">文档生成更方便</a>.</li>
     </ol>
 
     <p>自家:</p>
@@ -282,27 +279,27 @@
         </tr>
         <tr>
             <td><a href='https://github.com/thinkSky1206' target="_blank">@小武站台</a></td>
-            <td align="center">赞助: ￥100</td>
+            <td align="center">赞助: ￥100 (用于服务器升级)</td>
         </tr>
         <tr>
             <td>@Vincent</td>
-            <td align="center">赞助: ￥50</td>
+            <td align="center">赞助: ￥50 (用于服务器升级)</td>
         </tr>
         <tr>
             <td>@Vincent</td>
-            <td align="center">赞助: ￥50</td>
+            <td align="center">赞助: ￥50 (用于服务器升级)</td>
         </tr>
         <tr>
             <td>@深圳-Cinwell</td>
-            <td align="center">赞助: ￥100</td>
+            <td align="center">赞助: ￥100 (用于服务器升级)</td>
         </tr>
         <tr>
             <td><a href="https://www.insight.io/" target="_blank">insight.io</a></td>
-            <td align="center">赞助: ￥500</td>
+            <td align="center">赞助: ￥500 (用于服务器升级)</td>
         </tr>
-            <tr>
+        <tr>
             <td><a href="https://github.com/xprajna" target="_blank">@xprajna</a></td>
-            <td align="center">赞助: ￥700</td>
+            <td align="center">赞助: ￥700 (用于服务器升级)</td>
         </tr>
         </tbody>
     </table>
@@ -324,7 +321,7 @@
     <br/> <br/>
     <!--高速版-->
     <div id="SOHUCS" sid="www.hsweb.me"></div>
-    <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+    <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js"></script>
     <script type="text/javascript">
         window.changyan.api.config({
             appid: 'cysUlwNAF',
